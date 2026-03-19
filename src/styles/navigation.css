@@ -1,0 +1,41 @@
+/* Navigation Styles */
+
+nav {
+  transition: all 0.3s ease;
+}
+
+:root.dark nav {
+  background-color: rgb(3, 7, 18);
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #667eea;
+}
+
+.theme-toggle {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}

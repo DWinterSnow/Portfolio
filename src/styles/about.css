@@ -1,0 +1,38 @@
+/* About Section Styles */
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-tag:hover {
+  background-color: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
+:root.dark .skill-tag {
+  background-color: rgba(102, 126, 234, 0.2);
+  color: #a5b4fc;
+}
+
+:root.dark .skill-tag:hover {
+  background-color: #667eea;
+  color: white;
+}
+
+.about-content {
+  line-height: 1.8;
+}
+
+.about-highlight {
+  color: #667eea;
+  font-weight: 600;
+}

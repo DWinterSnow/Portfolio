@@ -1,0 +1,44 @@
+/* Hero Section Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes arrowBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+.animated-multi {
+  background: linear-gradient(270deg, #ff9a9e, #fbc2eb, #a18cd1, #89f7fe);
+  background-size: 1000% 1000%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.arrow-bounce {
+  color: rgba(255, 255, 255, 0.95);
+  animation: arrowBounce 1.4s ease-in-out infinite;
+  margin-top: -0.2rem;
+}
+
+.scroll-text {
+  color: rgba(255, 255, 255, 0.98);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: -0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-text {
+    font-size: 1rem;
+    margin-bottom: -0.15rem;
+  }
+  
+  .arrow-bounce {
+    width: 24px;
+    height: 24px;
+  }
+}

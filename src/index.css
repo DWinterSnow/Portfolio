@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark mode styles */
+:root.dark {
+  color-scheme: dark;
+}
+
+:root.dark body {
+  @apply bg-gray-900/95 text-white;
+}
+
+:root.dark section {
+  @apply bg-gray-900/95 text-white;
+}
+
+:root.dark h1,
+:root.dark h2,
+:root.dark h3,
+:root.dark h4,
+:root.dark h5,
+:root.dark h6 {
+  @apply text-white;
+}
+
+:root.dark p {
+  @apply text-gray-300;
+}
+
+:root.dark #home p {
+  @apply text-white;
+}
+
+:root.dark .section-title {
+  @apply text-white;
+}
+
+:root.dark .nav-link {
+  @apply text-gray-300 hover:text-primary;
+}
+
+:root.dark .service-card,
+:root.dark .project-card,
+:root.dark .testimonial-card {
+  @apply bg-gray-800 text-white;
+}
+
+:root.dark .btn-primary {
+  @apply hover:shadow-lg hover:shadow-primary/50;
+}
+
+:root.dark input,
+:root.dark textarea {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+:root.dark label {
+  @apply text-gray-300;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 font-semibold bg-gradient-to-r from-primary to-secondary text-white rounded-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-center mb-16 text-gray-900 relative pb-6;
+  }
+
+  :root.dark .section-title {
+    @apply text-white;
+  }
+
+  .section-title::after {
+    @apply content-[''] absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded;
+  }
+
+  .floating-shape {
+    @apply absolute rounded-full opacity-60 animate-pulse;
+  }
+
+  .service-card {
+    @apply bg-white p-10 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center;
+  }
+
+  :root.dark .service-card {
+    @apply bg-gray-800 text-white;
+  }
+
+  .project-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
+  }
+
+  :root.dark .project-card {
+    @apply bg-gray-800 text-white;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-10 rounded-lg shadow-md hover:shadow-xl transition-all duration-300;
+  }
+
+  :root.dark .testimonial-card {
+    @apply bg-gray-800 text-white;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-primary transition-colors duration-300 font-medium relative;
+  }
+
+  :root.dark .nav-link {
+    @apply text-gray-300;
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(10deg);
+    }
+  }
+
+  @keyframes logoFade {
+    0% {
+      opacity: 0.5;
+      background-position: 0% 50%;
+    }
+    50% {
+      opacity: 1;
+      background-position: 100% 50%;
+    }
+    100% {
+      opacity: 0.5;
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-float {
+    @apply animate-bounce;
+  }
+
+  .animate-logo-fade {
+    animation: logoFade 3s ease-in-out infinite;
+  }
+}
