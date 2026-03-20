@@ -1,57 +1,57 @@
 # Portfolio - Dias Oliveira Ruben
 
-A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
+Un site de portfolio moderne et réactif construit avec React, Vite et Tailwind CSS.
 
-## Features
+## Fonctionnalités
 
-- **Responsive Design** - Works seamlessly on mobile, tablet, and desktop
-- **Dark Mode Support** - Toggle between light and dark themes
-- **Project Filtering** - Filter projects by skills and type (Academic, Professional, Personal)
-- **Smooth Animations** - Fade-in animations and smooth scrolling
-- **Modern UI** - Built with Tailwind CSS and custom styling
+- **Design Réactif** - Fonctionne parfaitement sur mobile, tablette et bureau
+- **Support du Mode Sombre** - Basculez entre les thèmes clair et sombre
+- **Filtrage des Projets** - Filtrez les projets par compétences et type (Académique, Professionnel, Personnel)
+- **Animations Fluides** - Animations de fondu et défilement lisse
+- **Interface Moderne** - Construit avec Tailwind CSS et du style personnalisé
 
-## Tech Stack
+## Pile Technologique
 
-- **Frontend Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: React Icons
-- **Font Family**: Dancing Script, Inter
+- **Framework Frontend** : React 18
+- **Outil de Construction** : Vite
+- **Stylisation** : Tailwind CSS
+- **Icônes** : React Icons
+- **Famille de Polices** : Dancing Script, Inter
 
-## Project Structure
+## Structure du Projet
 
 ```
 src/
 ├── components/
-│   ├── Hero.jsx          # Landing section with profile
-│   ├── About.jsx         # About & experience section
-│   ├── Services.jsx      # Services offered
-│   ├── Projects.jsx      # Portfolio projects with filters
-│   ├── Contact.jsx       # Contact form
-│   ├── Navigation.jsx    # Header navigation
-│   └── Footer.jsx        # Footer with links
-├── styles/              # Component-specific CSS
-├── utils/               # Utility functions
-└── App.jsx              # Main app component
+│   ├── Hero.jsx          # Section d'accueil avec profil
+│   ├── About.jsx         # Section À propos et expérience
+│   ├── Services.jsx      # Services offerts
+│   ├── Projects.jsx      # Projets portfolio avec filtres
+│   ├── Contact.jsx       # Formulaire de contact
+│   ├── Navigation.jsx    # Navigation d'en-tête
+│   └── Footer.jsx        # Pied de page avec liens
+├── styles/              # CSS spécifique aux composants
+├── utils/               # Fonctions utilitaires
+└── App.jsx              # Composant principal de l'application
 
 public/
 ├── assets/
 │   ├── image/
-│   │   ├── projects/    # Project showcase images
-│   │   ├── industry/    # Experience/education images
-│   │   └── profile/     # Profile picture
-│   └── pdf/             # CV and portfolio PDFs
+│   │   ├── projects/    # Images de présentation des projets
+│   │   ├── industry/    # Images d'expérience/éducation
+│   │   └── profile/     # Photo de profil
+│   └── pdf/             # CV et PDF du portfolio
 ```
 
-## Adding Project Images
+## Ajouter des Images de Projet
 
-To add images for your projects:
+Pour ajouter des images pour vos projets :
 
-1. Place project images in: `public/assets/image/projects/{project-name}/`
-2. Name the image file the same as the project folder
-3. Supported formats: `.jpg`, `.png`
+1. Placez les images du projet dans : `public/assets/image/projects/{project-name}/`
+2. Nommez le fichier image de la même manière que le dossier du projet
+3. Formats supportés : `.jpg`, `.png`
 
-Example project structure:
+Exemple de structure de projet :
 ```
 public/assets/image/projects/
 ├── atibox/
@@ -66,37 +66,37 @@ public/assets/image/projects/
 ## Configuration
 
 ### Tailwind CSS
-Customizable colors in `tailwind.config.js`:
-- `primary`: Main brand color
-- `secondary`: Secondary accent color
+Couleurs personnalisables dans `tailwind.config.js` :
+- `primary` : Couleur de marque principale
+- `secondary` : Couleur d'accent secondaire
 
-### Dark Mode
-Dark mode is automatically detected based on system preference and can be toggled via the theme button.
+### Mode Sombre
+Le mode sombre est automatiquement détecté en fonction des préférences du système et peut être basculé via le bouton de thème.
 
 ## Sections
 
-1. **Hero** - Landing section with profile image and CTA buttons
-2. **About** - Experience timeline and education
-3. **Services** - Skills and services offered
-4. **Projects** - Portfolio projects with dual filtering (skills + type)
-5. **Contact** - Contact form (placeholder)
-6. **Footer** - Links to CV and Portfolio PDFs
+1. **Hero** - Section d'accueil avec image de profil et boutons d'appel à l'action
+2. **About** - Chronologie de l'expérience et études
+3. **Services** - Compétences et services offerts
+4. **Projects** - Projets portfolio avec double filtrage (compétences + type)
+5. **Contact** - Formulaire de contact (placeholder)
+6. **Footer** - Liens vers les PDF CV et Portfolio
 
-## Project Data
+## Données des Projets
 
-Projects include:
-- **Artibox** - Professional UX/UI design
-- **Gnews** - Full-stack web application
-- **Veux-tu m'épouser** - Audiovisual cinema project
-- **Modelisation 3D** - 3D modeling with Unity SDK
-- **Astral Sword** - Interactive art with Max MSP
-- **Aftermath Festival** - Festival branding
-- **TCGVault** - Mobile trading card app
+Les projets incluent :
+- **Artibox** - Conception UX/UI professionnelle
+- **Gnews** - Application web full-stack
+- **Veux-tu m'épouser** - Projet de cinéma audiovisuel
+- **Modelisation 3D** - Modélisation 3D avec Unity SDK
+- **Astral Sword** - Art interactif avec Max MSP
+- **Aftermath Festival** - Branding du festival
+- **TCGVault** - Application mobile pour cartes à collectionner
 
-## Contributing
+## Contribution
 
-Feel free to fork and modify this portfolio for your own use!
+N'hésitez pas à créer un fork et à modifier ce portfolio pour votre propre usage !
 
-## License
+## Licence
 
-Personal portfolio - use as reference or inspiration.
+Personal portfolio - Dias Oliveira Uben

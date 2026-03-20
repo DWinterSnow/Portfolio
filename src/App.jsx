@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -6,10 +7,19 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ProjectPage from './components/ProjectPage';
+import { scrollToSection } from './utils/scrollTo';
 import './index.css';
 
-function App() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      setTimeout(() => scrollToSection(location.state.scrollTo), 100);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +52,15 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/project/:slug" element={<ProjectPage />} />
+    </Routes>
   );
 }
 

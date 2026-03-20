@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaBars as Menu, FaTimes as X, FaMoon as Moon, FaSun as Sun } from 'react-icons/fa';
 import { scrollToSection as scrollTo } from '../utils/scrollTo';
 import '../styles/navigation.css';
@@ -40,6 +41,9 @@ function Navigation({ activeSection }) {
     animation: 'gradientShift 15s ease infinite',
   };
 
+  const location = useLocation();
+  const navigateTo = useNavigate();
+
   const links = [
     { href: '#home', label: 'Accueil' },
     { href: '#about', label: 'À propos' },
@@ -50,7 +54,12 @@ function Navigation({ activeSection }) {
 
   const handleScrollToSection = (id) => {
     setIsOpen(false);
-    scrollTo(id.slice(1)); // Remove '#' from href
+    const sectionId = id.slice(1); // Remove '#' from href
+    if (location.pathname !== '/') {
+      navigateTo('/', { state: { scrollTo: sectionId } });
+    } else {
+      scrollTo(sectionId);
+    }
   };
 
   return (

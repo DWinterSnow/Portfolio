@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { projects, skillLabels, typeLabels } from '../data/projects';
 import '../styles/projects.css';
 
 function Projects() {
@@ -6,85 +8,7 @@ function Projects() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [skillDropdownOpen, setSkillDropdownOpen] = useState(false);
   const [showAll, setShowAll] = useState(false);
-
-  const skillLabels = { 
-    all: 'Tous', 
-    mobile: 'Mobile', 
-    web: 'Web', 
-    'ux-design': 'UX/UI Design',
-    'graphic-design': 'Graphic Design',
-    branding: 'Branding',
-    audiovisuelle: 'Audiovisuelle',
-    interactive: 'Interactive',
-    '3d': '3D'
-  };
-  const typeLabels = { all: 'Tous', academic: 'Académique', professional: 'Professionnel', personal: 'Personnel' };
-
-  const projects = [
-    {
-      id: 1,
-      title: 'Artibox',
-      type: 'professional',
-      description: 'Professional UX/UI design for web and mobile platforms with intuitive user experience.',
-      skills: ['ux-design', 'web', 'mobile'],
-      image: '/assets/image/projects/atibox/atibox.jpg',
-      gradient: 'from-pink-500 to-red-500',
-    },
-    {
-      id: 2,
-      title: 'Gnews',
-      type: 'academic',
-      description: 'Full-stack web and mobile platform with responsive UX design, frontend and backend development.',
-      skills: ['web', 'mobile', 'ux-design'],
-      image: '/assets/image/projects/gnew/gnew.jpg',
-      gradient: 'from-teal-400 to-pink-300',
-    },
-    {
-      id: 3,
-      title: 'Veux-tu m\'épouser',
-      type: 'academic',
-      description: 'Audiovisual cinema project: 7-minute video with screenplay and multimedia storytelling.',
-      skills: ['audiovisuelle'],
-      image: '/assets/image/projects/veux-tu-mepuser/veux-tu-mepuser.jpg',
-      gradient: 'from-slate-500 to-zinc-600',
-    },
-    {
-      id: 4,
-      title: 'Modelisation 3D',
-      type: 'academic',
-      description: '3D modeling and animation with audiovisual content creation. Includes Unity SDK development for interactive 3D experiences.',
-      skills: ['3d', 'audiovisuelle'],
-      image: '/assets/image/projects/modelisation-3d/modelisation-3d.jpg',
-      gradient: 'from-blue-400 to-cyan-400',
-    },
-    {
-      id: 5,
-      title: 'Astral Sword',
-      type: 'academic',
-      description: 'Interactive digital art project using Max MSP exploring immersive storytelling and creative coding.',
-      skills: ['interactive'],
-      image: '/assets/image/projects/astral-sword/astral-sword.jpg',
-      gradient: 'from-purple-500 to-blue-600',
-    },
-    {
-      id: 6,
-      title: 'Aftermath Festival',
-      type: 'personal',
-      description: 'Festival branding and UX/UI design with Adobe Illustrator and Photoshop.',
-      skills: ['ux-design', 'branding'],
-      image: '/assets/image/projects/aftermath-festival/aftermath-festival.jpg',
-      gradient: 'from-indigo-500 to-purple-500',
-    },
-    {
-      id: 7,
-      title: 'TCGVault',
-      type: 'personal',
-      description: 'Mobile app combining UX/UI design with brand identity and branding strategy.',
-      skills: ['ux-design', 'branding', 'mobile'],
-      image: '/assets/image/projects/tcgvault/tcgvault.jpg',
-      gradient: 'from-orange-500 to-red-400',
-    },
-  ];
+  const navigate = useNavigate();
 
   const filteredProjects = projects.filter(p => {
     const skillMatch = filter === 'all' || p.skills.includes(filter);
@@ -167,7 +91,7 @@ function Projects() {
             <div
               key={project.id}
               className="project-card cursor-pointer group"
-              onClick={() => alert(`Ouverture de l'étude de cas pour ${project.title}...`)}
+              onClick={() => navigate(`/project/${project.slug}`)}
             >
               {/* Project Image */}
               <div className={`h-64 bg-gradient-to-br ${project.gradient} flex items-end justify-start p-6 relative overflow-hidden`}>
