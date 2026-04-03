@@ -22,6 +22,4 @@ dist-ssr
 *.sln
 *.sw?
 
-# Image Assets - exclude from git (will be added later)
-public/assets/image/
-public/assets/pdf/
+
