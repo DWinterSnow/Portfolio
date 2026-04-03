@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaDownload, FaLinkedin, FaGithub, FaArrowUp } from 'react-icons/fa';
 import { scrollToSection } from '../utils/scrollTo';
+import { asset } from '../utils/assetPath';
 import '../styles/footer.css';
 
 function Footer() {
@@ -54,7 +55,7 @@ function Footer() {
             <h4 className="font-bold text-white">Documents</h4>
             <div className="bg-white/5 border border-white/10 rounded-lg p-4 space-y-2 hover:bg-white/10 hover:border-primary/30 transition-all duration-300">
               <a
-                href="/assets/pdf/CV.pdf"
+                href={asset('/assets/pdf/CV.pdf')}
                 download="CV.pdf"
                 className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition"
               >
@@ -62,7 +63,7 @@ function Footer() {
                 Télécharger CV
               </a>
               <a
-                href="/assets/pdf/Portfolio.pdf"
+                href={asset('/assets/pdf/Portfolio.pdf')}
                 download="Portfolio.pdf"
                 className="flex items-center gap-2 text-sm text-gray-300 hover:text-primary transition"
               >

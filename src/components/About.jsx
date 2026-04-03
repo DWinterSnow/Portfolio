@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHourglassEnd } from 'react-icons/fa';
+import { asset } from '../utils/assetPath';
 import '../styles/about.css';
 import '../styles/testimonials.css';
 
@@ -30,7 +31,7 @@ function About() {
       points: [],
     },
     {
-      image: '/assets/image/industry/artibox.png',
+      image: asset('/assets/image/industry/artibox.png'),
       role: 'Stage UX/UI Designer',
       org: 'ArtiBox, Collégien',
       date: 'Juin 2025',
@@ -42,7 +43,7 @@ function About() {
       ],
     },
     {
-      image: '/assets/image/industry/optical.png',
+      image: asset('/assets/image/industry/optical.png'),
       role: 'Stage Assistant opticien',
       org: 'Optical Center, Pontault-Combault',
       date: 'Février 2019',
@@ -58,21 +59,21 @@ function About() {
   // Formation / parcours académique
   const education = [
     {
-      image: '/assets/image/industry/esiee.png',
+      image: asset('/assets/image/industry/esiee.png'),
       degree: "Bachelor BEST'm",
       org: 'ESIEE PARIS, Noisy-le-Grand',
       date: '2023 - 2026',
       notes: ['Parcours multimédia'],
     },
     {
-      image: '/assets/image/industry/lycee.png',
+      image: asset('/assets/image/industry/lycee.png'),
       degree: 'Baccalauréat général',
       org: "Lycée Charle le Chauve, Roissy-en-Brie",
       date: '2020 - 2023',
       notes: ["Spécialité LLCER", "Spécialité Art - Plastique"],
     },
     {
-      image: '/assets/image/industry/summer.png',
+      image: asset('/assets/image/industry/summer.png'),
       degree: 'Summer School — Startup Crash Course',
       org: 'TU Berlin Summer & Winter School, Berlin',
       date: 'Juil - Août 2025',

@@ -17,7 +17,7 @@ export const typeLabels = {
   personal: 'Personnel',
 };
 
-export const projects = [
+const _projects = [
   {
     id: 1,
     slug: 'artibox',
@@ -425,3 +425,17 @@ export const projects = [
     date: '2025',
   },
 ];
+
+const base = import.meta.env.BASE_URL;
+function prefixAssetPaths(obj) {
+  if (typeof obj === 'string' && obj.startsWith('/assets/'))
+    return base + obj.slice(1);
+  if (Array.isArray(obj)) return obj.map(prefixAssetPaths);
+  if (obj !== null && typeof obj === 'object')
+    return Object.fromEntries(
+      Object.entries(obj).map(([k, v]) => [k, prefixAssetPaths(v)])
+    );
+  return obj;
+}
+
+export const projects = _projects.map((p) => prefixAssetPaths(p));
