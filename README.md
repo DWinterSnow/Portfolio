@@ -99,4 +99,4 @@ N'hésitez pas à créer un fork et à modifier ce portfolio pour votre propre u
 
 ## Licence
 
-Personal portfolio - Dias Oliveira Uben
+Personal portfolio - Dias Oliveira Ruben
