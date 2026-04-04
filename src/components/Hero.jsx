@@ -15,7 +15,7 @@ function Hero() {
           <div className="flex justify-center md:justify-start">
             <div className="w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl ring-8 ring-white/30 bg-gray-100">
               <img
-                src={asset('/assets/profile/profile.png')}
+                src={asset('/assets/profile/profile.webp')}
                 alt="Dias Oliveira Rubn"
                 loading="lazy"
                 onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800?text=Dias+Oliveira+Rubn'; }}
